@@ -1,0 +1,18 @@
+/* ~~~~~~~~~~~~~
+   FILE: src/components/TopicTree/TopicList.css
+   ~~~~~~~~~~~~~ */
+
+  
+  /* Heading for top-level topics */
+  .topic-list-container h2 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Individual topic item card styling */
+  .topic-list-item {
+    border: 1px solid #ccc;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 4px; /* optional */
+  }
+  
