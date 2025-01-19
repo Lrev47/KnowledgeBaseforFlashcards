@@ -1,0 +1,7 @@
+@import url("./global/global.css");
+@import url("./pages/homepageStyle.css");
+@import url("./pages/FlashcardDetailPageStyle.css");
+@import url("./components/FlashcardDetailStyle.css");
+@import url("./components/FlashcardListStyle.css");
+@import url("./components/TopicDetailStyle.css");
+@import url("./components/TopicListStyle.css");
