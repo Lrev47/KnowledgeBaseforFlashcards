@@ -1,0 +1,44 @@
+/* ~~~~~~~~~~~~~
+   FILE: src/components/TopicTree/TopicDetail.css
+   ~~~~~~~~~~~~~ */
+
+
+  
+  /* The button to go back to the parent topic */
+  .parent-topic-backbutton {
+    margin-bottom: 1rem;
+  }
+  
+  /* The main heading for the topic name (currently <h2> in code) */
+  .topic-detail-title {
+    margin-bottom: 0.5rem; 
+  }
+  
+  /* If there's an overview, we can style it separately */
+  .topic-detail-overview {
+    margin-bottom: 1rem;
+  }
+  
+  /* Subtopic section container */
+  .subtopics-section {
+    margin-top: 1.5rem;
+  }
+  
+  /* Each subtopic item wrapper */
+  .subtopic-item {
+    margin: 8px 0;
+  }
+  
+  /* Cards section container */
+  .cards-section {
+    margin-top: 1.5rem;
+  }
+  
+  /* Each card item wrapper */
+  .card-item {
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+  }
+  
