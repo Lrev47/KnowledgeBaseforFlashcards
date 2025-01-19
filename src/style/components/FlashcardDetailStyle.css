@@ -1,0 +1,45 @@
+/* ~~~~~~~~~~~~~
+   FILE: src/components/FlashcardDetail/FlashcardDetail.css
+   ~~~~~~~~~~~~~ */
+
+/* Main container around the entire flashcard detail component */
+.flashcard-detail-container {
+    border: 1px solid #555;
+    padding: 12px;
+    margin-bottom: 1rem; /* optional extra spacing */
+  }
+  
+  /* Heading at the top of the component */
+  .flashcard-detail-container h2 {
+    margin-bottom: 0.5rem;
+    /* color, font-size, etc. can be customized here or rely on global. */
+  }
+  
+  /* The "Edit Explanation" button up top */
+  .flashcard-detail-edit-btn {
+    margin-bottom: 12px;
+  }
+  
+  /* Common styling for the question/answer paragraphs */
+  .flashcard-meta p {
+    margin: 0.5rem 0;
+  }
+  
+  /* The 'Detailed Explanation' section heading */
+  .explanation-section {
+    margin-top: 12px;
+  }
+  
+  /* Monaco Editor container if you want any special styling around it 
+     or you can rely on the default container style. */
+  .monaco-editor-wrapper {
+    margin-top: 8px;
+  }
+  
+  /* Buttons in the editor area */
+  .editor-actions button {
+    margin-top: 8px;
+    margin-right: 8px;
+    /* could add more styling if desired */
+  }
+  
