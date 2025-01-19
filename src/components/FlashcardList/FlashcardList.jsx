@@ -2,14 +2,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAllCards } from '../../store/Slices/cardsSlice';
+// No direct CSS import here, as you'll import it in index.css or elsewhere.
 
 function FlashcardList() {
   const dispatch = useDispatch();
-
-  // Pull out data from Redux store
   const { items: cards, loading, error } = useSelector((state) => state.cards);
 
-  // On mount, fetch all cards
   useEffect(() => {
     dispatch(fetchAllCards());
   }, [dispatch]);
@@ -18,20 +16,16 @@ function FlashcardList() {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <div>
+    <div className="flashcard-list">
       <h1>Flashcard List</h1>
       {cards.length === 0 ? (
         <p>No cards found.</p>
       ) : (
         cards.map((card) => (
-          <div key={card.id} style={{ border: '1px solid #ccc', margin: '8px', padding: '8px' }}>
+          <div key={card.id} className="flashcard-list-item">
             <h3>{card.question}</h3>
             <p>Author: {card.authorName}</p>
             <p>Difficulty: {card.difficulty}</p>
-            {/* 
-              If using React Router, you might link to "/cards/<id>" 
-              so FlashcardDetail can display. 
-            */}
           </div>
         ))
       )}
