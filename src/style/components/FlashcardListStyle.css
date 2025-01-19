@@ -1,0 +1,22 @@
+/* ~~~~~~~~~~~~~
+   FILE: src/components/FlashcardList/FlashcardList.css
+   ~~~~~~~~~~~~~ */
+
+/* Overall container for the FlashcardList component */
+.flashcard-list {
+    margin-bottom: 1rem; /* optional spacing at bottom */
+  }
+  
+  /* Style the title */
+  .flashcard-list h1 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Each individual flashcard item block */
+  .flashcard-list-item {
+    border: 1px solid #ccc;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 6px; /* optional round corners */
+  }
+  
