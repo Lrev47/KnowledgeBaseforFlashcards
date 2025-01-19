@@ -1,0 +1,14 @@
+/* ~~~~~~~~~~~~~
+   FILE: src/pages/FlashcardDetailPage/FlashcardDetailPage.css
+   ~~~~~~~~~~~~~ */
+
+/* Wrapper container for the entire detail page */
+.flashcard-detail-page-container {
+    margin: 1rem;
+  }
+  
+  /* Optional heading styling */
+  .flashcard-detail-page-container h1 {
+    margin-bottom: 1rem;
+  }
+  
