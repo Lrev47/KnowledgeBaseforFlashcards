@@ -3,7 +3,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import cardApi from '../../api/cardApi.js';  // ensure ".js" extension
 
-// Example: fetchAllCards async thunk
+// 1) FETCH ALL CARDS
 export const fetchAllCards = createAsyncThunk(
   'cards/fetchAll',
   async (_, { rejectWithValue }) => {
@@ -17,6 +17,7 @@ export const fetchAllCards = createAsyncThunk(
   }
 );
 
+// 2) FETCH CARD BY ID
 export const fetchCardById = createAsyncThunk(
   'cards/fetchById',
   async (cardId, { rejectWithValue }) => {
@@ -30,10 +31,24 @@ export const fetchCardById = createAsyncThunk(
   }
 );
 
+// 3) UPDATE CARD (PATCH /cards/:cardId)
+export const updateCard = createAsyncThunk(
+  'cards/update',
+  async ({ cardId, updates }, { rejectWithValue }) => {
+    try {
+      const response = await cardApi.updateCard(cardId, updates);
+      // e.g. server returns { message: 'Card ... updated successfully', data: {...} }
+      return response.data.data; // The updated card object
+    } catch (err) {
+      return rejectWithValue(err.response?.data || err.message);
+    }
+  }
+);
+
 const cardSlice = createSlice({
   name: 'cards',
   initialState: {
-    items: [],       // all cards
+    items: [],          // all cards
     selectedCard: null, // single-card detail
     loading: false,
     error: null,
@@ -41,7 +56,7 @@ const cardSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      // fetchAllCards
+      // 1) fetchAllCards
       .addCase(fetchAllCards.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -55,7 +70,7 @@ const cardSlice = createSlice({
         state.error = action.payload;
       })
 
-      // fetchCardById
+      // 2) fetchCardById
       .addCase(fetchCardById.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -69,6 +84,31 @@ const cardSlice = createSlice({
         state.loading = false;
         state.error = action.payload;
         state.selectedCard = null;
+      })
+
+      // 3) updateCard
+      .addCase(updateCard.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(updateCard.fulfilled, (state, action) => {
+        state.loading = false;
+        const updatedCard = action.payload;
+
+        // If the updated card is the currently selectedCard, update it
+        if (state.selectedCard && state.selectedCard.id === updatedCard.id) {
+          state.selectedCard = updatedCard;
+        }
+
+        // Optionally, update it in the items array
+        const index = state.items.findIndex((c) => c.id === updatedCard.id);
+        if (index !== -1) {
+          state.items[index] = updatedCard;
+        }
+      })
+      .addCase(updateCard.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
       });
   },
 });

@@ -1,6 +1,3 @@
-# 2) **Frontend README.md**
-
-```markdown
 # FlashcardMaker - Frontend (React + Redux)
 
 This is the **React** front end for browsing the knowledgebase, viewing flashcards, and exploring topics. It integrates with a Node/Express + Prisma backend that provides AI-generated flashcards, hierarchical topics, and optional QR code links.
@@ -70,24 +67,3 @@ Using **React Router**:
 
 ---
 
-## How to Run
-
-1. **Install dependencies** (assuming you have a React + Vite setup):
-   ```bash
-   npm install
-Start dev server:
-bash
-Copy
-npm run dev
-It typically runs at http://127.0.0.1:5173.
-Make sure your backend is running on http://localhost:3000 and has CORS enabled:
-js
-Copy
-import cors from 'cors';
-app.use(cors());
-Open http://127.0.0.1:5173 in your browser. You should see the homepage.
-Future Enhancements
-A search bar to find topics or flashcards by name.
-Authentication for editing or verifying flashcards.
-Better styling with a CSS framework or design library.
-Real-time updates if you want collaborative editing.

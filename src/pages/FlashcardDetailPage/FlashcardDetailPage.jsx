@@ -1,25 +1,18 @@
 // src/pages/FlashcardDetailPage/FlashcardDetailPage.jsx
+// (Showcasing how you'd remove inline style and add the class)
+
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import FlashcardDetail from '../../components/FlashcardDetail/FlashcardDetail';
+// No direct import of CSS here (as requested),
+// we assume it's imported globally in your index.css.
 
 function FlashcardDetailPage() {
   const { cardId } = useParams();
 
   return (
-    <div style={{ margin: '1rem' }}>
+    <div className="flashcard-detail-page-container">
       <h1>Flashcard Detail Page</h1>
-      {/* Pass the cardId prop if your FlashcardDetail relies on a prop 
-          or rely on the slice usage that calls useParams inside FlashcardDetail itself. */}
-      {/* 
-        Option A: FlashcardDetail uses its own useParams -> no prop needed:
-        <FlashcardDetail />
-      */}
-      
-      {/* 
-        Option B: If you want to pass it explicitly:
-        <FlashcardDetail cardId={cardId} />
-      */}
       <FlashcardDetail />
     </div>
   );
