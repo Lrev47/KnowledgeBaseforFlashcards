@@ -1,0 +1,15 @@
+/* ~~~~~~~~~~~~~
+   FILE: src/pages/TopicPage/TopicPage.css
+   ~~~~~~~~~~~~~ */
+
+/* The main container around the topic page */
+.topic-page-container {
+    margin: 1rem;
+  }
+  
+  /* If you want to give a bit of spacing or style for the H1 titles */
+  .topic-page-container h1 {
+    margin-bottom: 1rem;
+    /* color, font-size, etc. can be changed here if you want */
+  }
+  
