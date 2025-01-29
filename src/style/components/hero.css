@@ -1,0 +1,43 @@
+.hero {
+    padding: 2rem;
+    text-align: center;
+    background: #fff; /* or a light lavender background from your global theme */
+  }
+  
+  .hero-heading {
+    font-size: 2rem;
+    color: var(--heading-color);
+    margin: 1rem 0;
+    line-height: 1.2;
+  }
+  
+  /* Style your two emphasis words differently */
+  .keyword-study {
+    color: #8A75FF;     /* Lavender/purple accent */
+    font-weight: 700;   /* Bold or extra bold for impact */
+  }
+  
+  .keyword-succeed {
+    color: #FFC436;     /* A warm golden/yellow accent */
+    font-weight: 700;
+  }
+  
+  .hero-subtext {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+  }
+  
+  .hero-cta {
+    padding: 0.75rem 2rem;
+    background-color: var(--accent-color);
+    color: var(--foreground-color);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .hero-cta:hover {
+    background-color: var(--link-hover-color);
+  }
+  
