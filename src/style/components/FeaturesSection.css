@@ -1,0 +1,74 @@
+/* ~~~~~~~~~~~~~~~~~~~~~
+   FILE: src/styles/FeaturesSection.css
+   ~~~~~~~~~~~~~~~~~~~~~ */
+
+   .features-section {
+    padding: 3rem 1rem;
+    background-color: var(--background-color); /* or #fff if you prefer */
+  }
+  
+  /* Heading */
+  .features-heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--heading-color);
+  }
+  
+  .keyword-interactive {
+    color: var(--accent-color); /* your lavender‐purple from global.css */
+    font-weight: 700;
+  }
+  
+  /* Grid Layout */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* Each Feature Card */
+  .feature-card {
+    padding: 2rem;
+    border-radius: 12px;
+    color: var(--foreground-color); /* We'll override this for certain backgrounds */
+    text-align: center;
+  }
+  
+  /* Variation 1: Purple background */
+  .feature-card--purple {
+    background-color: #8A75FF; 
+  }
+  
+  /* Variation 2: Lighter lavender background */
+  .feature-card--lavender {
+    background-color: #C2ACFF;
+  }
+  
+  /* Variation 3: Yellow background */
+  .feature-card--yellow {
+    background-color: #FFC436;
+    color: #3F3D56; /* Dark text for better contrast on yellow */
+  }
+  
+  /* Headings within cards */
+  .feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #fff; /* By default, set to white; 
+                   you can override if needed (like the yellow card) */
+  }
+  
+  /* Paragraphs within cards */
+  .feature-card p {
+    margin: 0;
+    line-height: 1.4;
+    color: #fff; /* Same note about overriding on the yellow card */
+  }
+  
+  /* If you want to fine-tune the color for the yellow card’s text: */
+  .feature-card--yellow h3,
+  .feature-card--yellow p {
+    color: #3F3D56; 
+  }
+  
