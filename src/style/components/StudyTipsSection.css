@@ -1,0 +1,90 @@
+/* ~~~~~~~~~~~~~~~~~~~~~
+   FILE: src/styles/StudyTipsSection.css
+   ~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Container */
+.study-tips-section {
+    padding: 3rem 1rem;
+    background-color: #FFFFFF; /* or var(--background-color) if you prefer consistency */
+  }
+  
+  .study-tips-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Heading */
+  .study-tips-heading {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--heading-color);
+  }
+  
+  /* Keyword styling for “blog” or “Study Tips” highlight */
+  .keyword-blog {
+    color: var(--accent-color); /* e.g., your purple accent (#8A75FF) */
+    font-weight: 700;
+  }
+  
+  /* Card Grid Layout */
+  .study-tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* Individual Tip Card */
+  .tip-card {
+    background-color: #FFFFFF; /* White card background */
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+  }
+  
+  /* Hover effect */
+  .tip-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* Image */
+  .tip-card__image {
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    object-fit: cover;
+  }
+  
+  /* Title */
+  .tip-card__title {
+    font-size: 1.25rem;
+    margin: 1rem 1rem 0.5rem;
+    color: var(--heading-color);
+  }
+  
+  /* Description */
+  .tip-card__description {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin: 0 1rem 1rem;
+    flex-grow: 1;
+  }
+  
+  /* “Read More” link */
+  .tip-card__link {
+    margin: auto 1rem 1rem;
+    display: inline-block;
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  /* Optional underline on hover */
+  .tip-card__link:hover {
+    text-decoration: underline;
+  }
+  
